@@ -5,7 +5,7 @@ import { blogs } from '../lib/placeholder-data'
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' })
 
 async function seedBlogs() {
-    await sql`CREATE EXTENSIONS IF NOT EXISTS 'uuid-ossp'`
+    await sql`CREATE EXTENSION IF NOT EXISTS 'uuid-ossp'`
 
     await sql`
         CREATE TABLE IF NOT EXISTS blogs (
@@ -31,12 +31,11 @@ async function seedBlogs() {
 export async function GET() {
     try {
         const result = await sql.begin((sql) => [
-            seedBlogs()
+            seedBlogs(),
         ])
 
         return Response.json({ message: 'Database seeded successfully'})
     } catch (error) {
         return Response.json({ error }, { status: 500 })
-
     }
 }
