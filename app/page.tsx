@@ -1,4 +1,4 @@
-import Table from "@/app/ui/table"
+import Table from "./ui/table"
 
 export default function Page() {
   return (
