@@ -8,12 +8,10 @@ export default async function Table({
 }) {
     const texts = await fetchFilteredTexts(query)
 
-    texts.map(i => console.log(i.id))
-
     return (
         <div>
             {texts?.map((text:Text) => (
-                <div key={text.id} className="flex justify-center items-center">
+                <div key={text.id} className="flex justify-center items-center border border-gray-300 rounded-md mx-1 my-2">
                     <p className="text-2xl">{text.text}</p>
                 </div>
             ))}

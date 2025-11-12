@@ -19,7 +19,7 @@ export default function Search() {
     }, 300)
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-1">
             <input
                 onChange={e => {handleSearch(e.target.value)}}
                 defaultValue={searchParams.get('query')?.toString()}
