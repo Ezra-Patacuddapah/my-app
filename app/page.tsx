@@ -1,7 +1,9 @@
+import Table from "./ui/table"
+
 export default function Page() {
   return (
     <main>
-      <p>Login</p>
+      <Table />
     </main>
   )
 }
