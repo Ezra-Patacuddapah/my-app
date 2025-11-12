@@ -6,7 +6,7 @@ export function Button({ children, className, ...rest }: ButtonProps) {
     return (
         <button
             {...rest}
-            className="border rounded-xl bg-slate-900"
+            className="bg-gray-600 py-1 px-2 rounded-r-md"
         >
             {children}
         </button>
