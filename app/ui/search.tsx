@@ -26,6 +26,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
                 defaultValue={searchParams.get('query')?.toString()}
                 placeholder={placeholder}
                 className='p-2 w-70 md:w-100 border border-white rounded-md md:text-xl my-1'
+                autoFocus
             />
         </div>
     )

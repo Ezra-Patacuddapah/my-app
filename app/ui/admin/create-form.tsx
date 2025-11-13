@@ -12,7 +12,7 @@ export default function Form() {
         <>
             <form action={formAction} className='flex justify-center items-center mt-2'>
                 <input type="text" name="text" id="text" className='py-1 pl-2 border border-white rounded-l-md'
-                    aria-describedby="text-error"
+                    aria-describedby="text-error" autoFocus
                 />
                 <Link
                     href='/admin'

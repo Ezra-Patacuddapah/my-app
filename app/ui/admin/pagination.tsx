@@ -20,7 +20,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
     return (
         <>
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center fixed bottom-10 left-0 right-0'>
                 <PaginationNav
                     direction='left'
                     href={createPageURL(currentPage - 1)}
@@ -77,7 +77,7 @@ function PaginationNumber({
             'rounded-l-md': position === 'first' || position === 'single',
             'rounded-r-md': position === 'last' || position === 'single',
             'z-10 bg-gray-900 text-white': isActive,
-            'hover:bg-gray-100': !isActive && position !== 'middle',
+            'hover:bg-gray-800': !isActive && position !== 'middle',
             'text-gray-300': position === 'middle',
         }
     )
@@ -103,7 +103,7 @@ function PaginationNav ({
     const className = clsx(
         'flex py-1 px-2 justify-center items-center rounded-md bg-gray-600',
         {
-            'pointer-events-none hidden': isDisabled,
+            'pointer-events-none invisible': isDisabled,
             'hover:bg-gray-900': !isDisabled,
             'mr-2 md:mr-4': direction === 'left',
             'ml-2 md:ml-4': direction === 'right',
