@@ -101,7 +101,7 @@ function PaginationNav ({
     isDisabled: boolean;
 }) {
     const className = clsx(
-        'flex w-10 h-10 justify-center items-center rounded-md bg-gray-600',
+        'flex py-1 px-2 justify-center items-center rounded-md bg-gray-600',
         {
             'pointer-events-none text-gray-600': isDisabled,
             'hover:bg-gray-900': !isDisabled,
