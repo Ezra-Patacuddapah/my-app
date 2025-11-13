@@ -13,7 +13,7 @@ export default async function Table({
     return (
         <div>
             {texts?.map((text:Text) => (
-                <div key={text.id} className="flex justify-center items-center border border-gray-300 rounded-md mx-1 my-2">
+                <div key={text.id} className="flex justify-center items-center border border-gray-600 rounded-md mx-1 my-2 py-8">
                     <p className="text-2xl">{text.text}</p>
                 </div>
             ))}
