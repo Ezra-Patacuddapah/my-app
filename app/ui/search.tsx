@@ -25,7 +25,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
                 onChange={e => {handleSearch(e.target.value)}}
                 defaultValue={searchParams.get('query')?.toString()}
                 placeholder={placeholder}
-                className='pl-2 border border-white rounded-md'
+                className='p-2 w-70 md:w-100 border border-white rounded-md md:text-xl my-1'
             />
         </div>
     )
