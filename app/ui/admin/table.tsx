@@ -15,7 +15,7 @@ export default async function Table({
     return (
         <div>
             {texts?.map((text:Text) => (
-                <div key={text.id} className='text-center border border-gray-600 rounded-md mx-1 my-2 pt-4'>
+                <div key={text.id} className='text-center border border-gray-600 rounded-md mx-1 my-2 pt-2'>
                     <p className="text-2xl">{text.text}</p>
                     <div className='flex justify-end items-center'>
                         <Update id={text.id} />
