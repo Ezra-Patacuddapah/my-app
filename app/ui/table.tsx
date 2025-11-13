@@ -2,11 +2,13 @@ import { Text } from '../lib/definitions';
 import { fetchFilteredTexts } from "@/app/lib/data";
 
 export default async function Table({
-    query
+    query,
+    currentPage,
 }: {
     query: string;
+    currentPage: number,
 }) {
-    const texts = await fetchFilteredTexts(query)
+    const texts = await fetchFilteredTexts(query, currentPage)
 
     return (
         <div>
