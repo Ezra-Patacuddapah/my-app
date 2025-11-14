@@ -103,7 +103,7 @@ function PaginationNav ({
     const className = clsx(
         'flex py-1 px-2 justify-center items-center rounded-md bg-gray-600',
         {
-            'pointer-events-none invisible': isDisabled,
+            'pointer-events-none text-gray-600 bg-gray-900': isDisabled,
             'hover:bg-gray-900': !isDisabled,
             'mr-2 md:mr-4': direction === 'left',
             'ml-2 md:ml-4': direction === 'right',
