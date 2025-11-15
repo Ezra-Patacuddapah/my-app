@@ -2,6 +2,9 @@ import Table from "./ui/table"
 import Search from "./ui/search"
 import { fetchTextsPages } from "./lib/data";
 import Pagination from "./ui/admin/pagination";
+import { Suspense } from 'react'
+import { TextsTableSkeleton } from './ui/skeltetons'
+
 
 export default async function Page(props: {
     searchParams?: Promise<{
@@ -17,7 +20,9 @@ export default async function Page(props: {
     return (
         <div>
             <Search placeholder="Search..." />
-            <Table query={query} currentPage={currentPage} />
+            <Suspense key={query + currentPage} fallback={<TextsTableSkeleton />}>
+                <Table query={query} currentPage={currentPage} />
+            </Suspense>
             <Pagination totalPages={totalPages} />
         </div>
     )

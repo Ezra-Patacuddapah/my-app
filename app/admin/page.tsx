@@ -4,6 +4,8 @@ import { Create } from '../ui/admin/buttons'
 import Search from '../ui/search'
 import { fetchTextsPages } from '@/app/lib/data'
 import Pagination from '../ui/admin/pagination'
+import { Suspense } from 'react'
+import { TextsTableSkeleton } from '../ui/skeltetons'
 
 export const metadata: Metadata = {
     title: "Admin"
@@ -24,7 +26,9 @@ export default async function Page(props: {
         <div>
             <Create />
             <Search placeholder='Search...'/>
-            <Table query={query} currentPage={currentPage} />
+            <Suspense key={query + currentPage} fallback={<TextsTableSkeleton />}>
+                <Table query={query} currentPage={currentPage} />
+            </Suspense>
             <Pagination totalPages={totalPages} />
         </div>
     )
