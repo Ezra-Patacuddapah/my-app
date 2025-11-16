@@ -17,11 +17,13 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                 <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-white rounded-md' 
                     autoFocus
                 />
-                <Link
-                    href='/admin'
-                >
-                    <Button className='mx-1'>Cancel</Button>
-                </Link>
+                <Button className='mx-1' type='submit'>
+                    <Link
+                        href='/admin'
+                    >
+                        Cancel
+                    </Link>
+                </Button>
                 <Button type="submit">Save</Button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true' className='flex-inline'>

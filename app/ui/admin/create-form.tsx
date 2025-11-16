@@ -14,11 +14,13 @@ export default function Form() {
                 <input type="text" name="text" id="text" className='py-1 pl-2 border border-white rounded-md mr-1'
                     aria-describedby="text-error" autoFocus
                 />
-                <Link
-                    href='/admin'
-                >
-                    <Button className='mx-1'>Cancel</Button>
-                </Link>
+                <Button className='mx-1' type="submit">
+                    <Link
+                        href='/admin'
+                    >
+                        Cancel
+                    </Link>
+                </Button>
                 <Button type="submit" className=''>Save</Button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true'>
