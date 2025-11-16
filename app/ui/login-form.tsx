@@ -4,6 +4,7 @@ import { Button } from "./button"
 import { useActionState } from "react"
 import { useSearchParams } from "next/navigation"
 import { authenticate } from "../lib/actions"
+import Link from "next/link"
 
 export default function LoginForm() {
     const searchParams = useSearchParams()
@@ -13,7 +14,7 @@ export default function LoginForm() {
         undefined,
     )
 
-    const inputStyles = "py-1 pl-2 border border-white rounded-md mr-1"
+    const inputStyles = "py-1 pl-2 border border-white rounded-md mb-2"
 
     return (
         <form 
@@ -44,7 +45,12 @@ export default function LoginForm() {
                 name="redirectTo"
                 value={callbackUrl}
             />
-            <Button aria-disabled={isPending} className="mt-2">Log in</Button>
+            <div className="flex justify-center items-center mt-2 gap-2">
+                <Link href='/'>
+                    <Button>Cancel</Button>
+                </Link>
+                <Button aria-disabled={isPending}>Log in</Button>
+            </div>
             <div
                 aria-live="polite"
                 aria-atomic="true"
