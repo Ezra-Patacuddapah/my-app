@@ -6,6 +6,7 @@ import { fetchTextsPages } from '@/app/lib/data'
 import Pagination from '../ui/admin/pagination'
 import { Suspense } from 'react'
 import { TextsTableSkeleton } from '../ui/skeltetons'
+import SignOut from '../ui/admin/sign-out'
 
 export const metadata: Metadata = {
     title: "Admin"
@@ -30,6 +31,9 @@ export default async function Page(props: {
                 <Table query={query} currentPage={currentPage} />
             </Suspense>
             <Pagination totalPages={totalPages} />
+            <div className='fixed left-5 bottom-5'>
+                <SignOut />
+            </div>
         </div>
     )
 }

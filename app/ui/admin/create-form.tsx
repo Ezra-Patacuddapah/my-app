@@ -11,14 +11,13 @@ export default function Form() {
     return (
         <>
             <form action={formAction} className='flex justify-center items-center mt-2'>
-                <input type="text" name="text" id="text" className='py-1 pl-2 border border-white rounded-l-md'
+                <input type="text" name="text" id="text" className='py-1 pl-2 border border-white rounded-md mr-1'
                     aria-describedby="text-error" autoFocus
                 />
                 <Link
                     href='/admin'
-                    className='bg-gray-600 p-1 border-r-2 border-gray-900 pr-2'
                 >
-                    Cancel
+                    <Button>Cancel</Button>
                 </Link>
                 <Button type="submit">Create</Button>
             </form>

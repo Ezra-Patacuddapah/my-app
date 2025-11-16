@@ -12,3 +12,11 @@ export const texts = [
         text: 'Mark',
     },
 ]
+
+export const admins = [
+    {
+        id: 'da65a89a-81d9-4161-b3a4-5d21b2ca343a',
+        name: 'Admin',
+        password: '123456',
+    }
+]

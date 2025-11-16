@@ -1,7 +1,7 @@
-// import { fetchTexts } from "@/app/lib/data" // Just Read without a filter
 import { Text } from '../../lib/definitions'
 import { Update, Delete } from './buttons'
 import { fetchFilteredTexts } from "@/app/lib/data";
+// import { fetchTexts } from "@/app/lib/data" // Just Read without a filter
 
 export default async function Table({
     query,
@@ -15,8 +15,8 @@ export default async function Table({
     return (
         <div className='grid grid-cols-1 md:grid-cols-3 md:px-30 gap-3 mt-3'>
             {texts?.map((text:Text) => (
-                <div key={text.id} className='flex flex-col justify-between items-center border border-gray-600 rounded-md mx-1 p-6'>
-                    <p className="md:text-2xl">{text.text}</p>
+                <div key={text.id} className='flex flex-col justify-between items-center border mx-auto w-full max-w-sm border-gray-600 rounded-md p-6'>
+                    <p className="md:text-2xl text-center">{text.text}</p>
                     <div className='flex justify-center items-center'>
                         <Update id={text.id} />
                         <Delete id={text.id} />

@@ -28,6 +28,7 @@ export default function NavLinks() {
                                 'flex w-auto grow bg-gray-600 items-center justify-center gap-2 rounded-md py-1 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:px-3',
                                 {
                                     'bg-sky-100 text-blue-600': pathname === link.href,
+                                    'hidden': pathname === '/admin' || pathname === '/login' || pathname === '/admin/create' || pathname === '/admin/update',
                                 },
                             )}
                         >
