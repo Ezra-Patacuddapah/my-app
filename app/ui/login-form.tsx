@@ -49,7 +49,7 @@ export default function LoginForm() {
                 <Link href='/'>
                     <Button>Cancel</Button>
                 </Link>
-                <Button aria-disabled={isPending}>Log in</Button>
+                <Button aria-disabled={isPending} type="submit">Log in</Button>
             </div>
             <div
                 aria-live="polite"
