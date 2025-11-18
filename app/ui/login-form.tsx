@@ -5,6 +5,7 @@ import { useActionState } from "react"
 import { useSearchParams } from "next/navigation"
 import { authenticate } from "../lib/actions"
 import Link from "next/link"
+import { UserIcon, KeyIcon, PaperAirplaneIcon, XCircleIcon } from "@heroicons/react/24/solid"
 
 export default function LoginForm() {
     const searchParams = useSearchParams()
@@ -21,21 +22,25 @@ export default function LoginForm() {
             action={formAction}
             className="flex flex-col m-5 justify-center items-center"
         >
-            <label htmlFor="name" className="my-1">Name</label>
+            <label htmlFor="name" className="my-1">
+                <UserIcon className="w-5 h-5" />
+            </label>
             <input 
                 type="text" 
                 id="name"
                 name="name"
-                placeholder="Enter name"
+                placeholder="Enter Name"
                 required
                 className={inputStyles}
             />
-            <label htmlFor="password" className="my-1">Password</label>
+            <label htmlFor="password" className="my-1">
+                <KeyIcon className="w-5 h-5" />
+            </label>
             <input 
                 type="password" 
                 id="password"
                 name="password"
-                placeholder="Enter password"
+                placeholder="Enter Password"
                 required
                 minLength={6}
                 className={inputStyles}
@@ -47,9 +52,13 @@ export default function LoginForm() {
             />
             <div className="flex justify-center items-center mt-2 gap-2">
                 <Link href='/'>
-                    <Button>Cancel</Button>
+                    <button>
+                        <XCircleIcon className="w-5 h-5 mt-1" />
+                    </button>
                 </Link>
-                <Button aria-disabled={isPending} type="submit">Log in</Button>
+                <button aria-disabled={isPending} type="submit">
+                        <PaperAirplaneIcon className="w-5 h-5" />
+                </button>
             </div>
             <div
                 aria-live="polite"

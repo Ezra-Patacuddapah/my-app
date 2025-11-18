@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from '../button'
 import { updateText, State } from '@/app/lib/actions'
 import { Text } from '@/app/lib/definitions'
 import Link from 'next/link'
 import { useActionState } from 'react'
+import { PaperAirplaneIcon, XCircleIcon } from '@heroicons/react/24/solid'
 
 export default function UpdateTextForm({ text }: { text: Text} ) {
     const initialState: State = { message: null, errors: {} }
@@ -14,17 +14,19 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
     return (
         <>
             <form action={formAction} className='flex justify-center items-center mt-2'>
-                <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-white rounded-md' 
-                    autoFocus
-                />
                 <Link
                     href='/admin'
                 >
-                    <Button className='mx-1' type='button'>
-                            Cancel
-                    </Button>
+                    <button type="button">
+                            <XCircleIcon className='w-6 h-6 mt-2 mr-1' />
+                    </button>
                 </Link>
-                <Button type="submit">Save</Button>
+                <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-white rounded-md' 
+                    autoFocus placeholder='Update'
+                />
+                <button type="submit">
+                    <PaperAirplaneIcon className='w-5 h-5' />
+                </button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true' className='flex-inline'>
                 {state.errors?.text &&

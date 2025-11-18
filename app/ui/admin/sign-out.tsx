@@ -1,5 +1,5 @@
 import { signOut } from "@/auth";
-import { Button } from "../button";
+import { LockClosedIcon } from "@heroicons/react/24/solid";
 
 export default function SignOut() {
     return (
@@ -8,7 +8,9 @@ export default function SignOut() {
                 await signOut({ redirectTo: '/'})
             }}
             >
-                <Button className="">Sign Out</Button>
+                <button type="submit" className="">
+                    <LockClosedIcon className="w-6 h-6" />
+                </button>
             </form>
 
     )
