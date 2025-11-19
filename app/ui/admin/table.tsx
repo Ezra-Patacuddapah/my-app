@@ -17,7 +17,7 @@ export default async function Table({
             {texts?.map((text:Text) => (
                 <div key={text.id} className='flex flex-col justify-between items-center relative border mx-auto w-full max-w-sm border-gray-600 rounded-md p-6'>
                     <p className="md:text-2xl text-center">{text.text}</p>
-                    <div className='flex justify-center items-center absolute right-1 bottom-1'>
+                    <div className='flex justify-center items-center absolute right-1 bottom-0'>
                         <span className='mr-1'>
                             <Update id={text.id} />
                         </span>
