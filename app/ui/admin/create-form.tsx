@@ -1,7 +1,6 @@
 'use client'
 
 import { createText, State } from "@/app/lib/actions"
-import Link from 'next/link'
 import { useActionState } from 'react'
 import { PaperAirplaneIcon } from '@heroicons/react/24/solid'
 import Cancel from "./cancel"
@@ -16,7 +15,7 @@ export default function Form() {
                     aria-describedby="text-error" autoFocus placeholder="Create"
                 />
                 <button type="submit">
-                    <PaperAirplaneIcon className='w-5 h-5 text-blue-400' />
+                    <PaperAirplaneIcon className='w-6 h-6 text-blue-400 animate-pulse' />
                 </button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true'>

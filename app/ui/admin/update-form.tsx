@@ -18,7 +18,7 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                     autoFocus placeholder='Update'
                 />
                 <button type="submit">
-                    <PaperAirplaneIcon className='w-5 h-5 text-blue-400' />
+                    <PaperAirplaneIcon className='w-6 h-6 text-blue-400 animate-pulse' />
                 </button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true' className='flex-inline'>
