@@ -11,7 +11,7 @@ export default function Form() {
     const [state, formAction] = useActionState(createText, initialState)
     return (
         <>
-            <form action={formAction} className='flex justify-center items-center mt-2'>
+            <form action={formAction} className='flex justify-center items-center mt-10'>
                 <input type="text" name="text" id="text" className='py-1 pl-2 border border-white rounded-md mr-1'
                     aria-describedby="text-error" autoFocus placeholder="Create"
                 />
