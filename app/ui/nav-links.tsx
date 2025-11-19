@@ -31,7 +31,7 @@ export default function NavLinks() {
                                     'flex w-auto items-center justify-between hover:bg-sky-100 hover:text-blue-600 rounded-sm',
                                     {
                                         'bg-sky-100 text-blue-600': pathname === link.href,
-                                        'hidden': pathname === '/admin' || pathname === '/login' || pathname === '/admin/create' || pathname === '/admin/update',
+                                        'hidden': pathname !== '/',
                                     },
                                 )}
                             >

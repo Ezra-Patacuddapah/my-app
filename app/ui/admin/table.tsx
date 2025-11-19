@@ -15,11 +15,15 @@ export default async function Table({
     return (
         <div className='grid grid-cols-2 m-1 md:grid-cols-3 md:px-30 gap-3 mt-3'>
             {texts?.map((text:Text) => (
-                <div key={text.id} className='flex flex-col justify-between items-center border mx-auto w-full max-w-sm border-gray-600 rounded-md p-6'>
+                <div key={text.id} className='flex flex-col justify-between items-center relative border mx-auto w-full max-w-sm border-gray-600 rounded-md p-6'>
                     <p className="md:text-2xl text-center">{text.text}</p>
-                    <div className='flex justify-center items-center'>
-                        <Update id={text.id} />
-                        <Delete id={text.id} />
+                    <div className='flex justify-center items-center absolute right-1 bottom-1'>
+                        <span className='mr-1'>
+                            <Update id={text.id} />
+                        </span>
+                        <span className='ml-1'>
+                            <Delete id={text.id} />
+                        </span>
                     </div>
                 </div>
             ))}

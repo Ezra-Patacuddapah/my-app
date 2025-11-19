@@ -8,7 +8,7 @@ export default function SignOut() {
                 await signOut({ redirectTo: '/'})
             }}
             >
-                <button type="submit" className="">
+                <button type="submit" className="text-yellow-400">
                     <LockClosedIcon className="w-6 h-6" />
                 </button>
             </form>
