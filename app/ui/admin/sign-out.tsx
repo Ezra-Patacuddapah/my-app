@@ -1,5 +1,5 @@
 import { signOut } from "@/auth";
-import { LockClosedIcon } from "@heroicons/react/24/solid";
+import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 
 export default function SignOut() {
     return (
@@ -9,7 +9,7 @@ export default function SignOut() {
             }}
             >
                 <button type="submit" className="text-yellow-400">
-                    <LockClosedIcon className="w-6 h-6" />
+                    <ArrowLeftStartOnRectangleIcon className="w-6 h-6" />
                 </button>
             </form>
 

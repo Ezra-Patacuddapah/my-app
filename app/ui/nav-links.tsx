@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { HomeIcon, UserIcon } from "@heroicons/react/24/solid";
+import { HomeIcon, ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/solid";
 
 const links = [
     {
         name: <HomeIcon className="w-5 h-5" />, href: '/', id: 1,
     },
     {
-        name: <UserIcon className="w-5 h-5 fixed right-2" />, href: '/admin', id: 2,
+        name: <ArrowRightEndOnRectangleIcon className="w-5 h-5 fixed right-2" />, href: '/admin', id: 2,
     },
 ]
 
