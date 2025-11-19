@@ -19,11 +19,17 @@ export default async function Page(props: {
 
     return (
         <div>
-            <Search placeholder="Search..." />
-            <Suspense key={query + currentPage} fallback={<TextsTableSkeleton />}>
-                <Table query={query} currentPage={currentPage} />
-            </Suspense>
-            <Pagination totalPages={totalPages} />
+            <div className="fixed left-0 right-0 top-2">
+                <Search placeholder="Search..." />
+            </div>
+            <div className="mt-15">
+                <Suspense key={query + currentPage} fallback={<TextsTableSkeleton />}>
+                    <Table query={query} currentPage={currentPage} />
+                </Suspense>
+            </div>
+            <div className="fixed left-0 right-0 bottom-0">
+                <Pagination totalPages={totalPages} />
+            </div>
         </div>
     )
 }

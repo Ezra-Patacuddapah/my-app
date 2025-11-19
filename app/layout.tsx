@@ -5,10 +5,10 @@ import Logo from './ui/logo';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | T CRUD S',
-    default: 'T CRUD S',
+    template: '%s | TCRUDS',
+    default: 'TCRUDS',
   },
-  description: 'T CRUD S is developed by Ezra.'
+  description: 'TCRUDS is developed by Ezra.'
 }
 
 export default function RootLayout({

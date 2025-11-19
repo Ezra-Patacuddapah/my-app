@@ -10,7 +10,7 @@ const links = [
         name: <HomeIcon className="w-5 h-5" />, href: '/', id: 1,
     },
     {
-        name: <ArrowRightEndOnRectangleIcon className="w-5 h-5 fixed right-2 text-blue-400" />, href: '/admin', id: 2,
+        name: <ArrowRightEndOnRectangleIcon className="w-7 h-7 fixed right-2 bottom-2 text-blue-400 animate-pulse" />, href: '/admin', id: 2,
     },
 ]
 
@@ -19,7 +19,7 @@ export default function NavLinks() {
 
     return (
         <>
-            <div className="flex justify-center items-center gap-1 fixed bottom-2 md:bottom-5 left-2 z-20">
+            <div className="flex justify-center items-center gap-1 fixed bottom-2 md:bottom-5 left-3 z-20">
                 {links.map(link => {
                     return (
                         <Link

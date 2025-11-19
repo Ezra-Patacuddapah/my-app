@@ -3,8 +3,8 @@
 import { useActionState } from "react"
 import { useSearchParams } from "next/navigation"
 import { authenticate } from "../lib/actions"
-import Link from "next/link"
-import { UserIcon, KeyIcon, PaperAirplaneIcon, XCircleIcon } from "@heroicons/react/24/solid"
+import { UserIcon, KeyIcon, PaperAirplaneIcon } from "@heroicons/react/24/solid"
+import { CancelAdmin } from "./admin/cancel"
 
 export default function LoginForm() {
     const searchParams = useSearchParams()
@@ -14,7 +14,7 @@ export default function LoginForm() {
         undefined,
     )
 
-    const inputStyles = "py-1 pl-2 border border-white rounded-md mb-2"
+    const inputStyles = "py-1 pl-2 border border-white rounded-md mb-1"
 
     return (
         <form 
@@ -22,7 +22,7 @@ export default function LoginForm() {
             className="flex flex-col m-5 justify-center items-center"
         >
             <label htmlFor="name" className="my-1">
-                <UserIcon className="w-5 h-5" />
+                <UserIcon className="w-5 h-5 text-gray-400" />
             </label>
             <input 
                 type="text" 
@@ -33,7 +33,7 @@ export default function LoginForm() {
                 className={inputStyles}
             />
             <label htmlFor="password" className="my-1">
-                <KeyIcon className="w-5 h-5" />
+                <KeyIcon className="w-5 h-5 text-gray-400" />
             </label>
             <input 
                 type="password" 
@@ -49,14 +49,9 @@ export default function LoginForm() {
                 name="redirectTo"
                 value={callbackUrl}
             />
-            <div className="flex justify-center items-center mt-2 gap-2">
-                <Link href='/'>
-                    <button>
-                        <XCircleIcon className="w-5 h-5 mt-1" />
-                    </button>
-                </Link>
+            <div className="mt-1">
                 <button aria-disabled={isPending} type="submit">
-                        <PaperAirplaneIcon className="w-5 h-5" />
+                        <PaperAirplaneIcon className="w-7 h-7 animate-pulse text-blue-400" />
                 </button>
             </div>
             <div
@@ -69,6 +64,7 @@ export default function LoginForm() {
                     </>
                 )}
             </div>
+            <CancelAdmin />
         </form>
     )
 }
