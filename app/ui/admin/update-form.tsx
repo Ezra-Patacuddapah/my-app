@@ -14,7 +14,7 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
     return (
         <>
             <form action={formAction} className='flex justify-center items-center mt-10'>
-                <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-white rounded-md' 
+                <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-blue-300 rounded-md' 
                     autoFocus placeholder='Update'
                 />
                 <button type="submit">

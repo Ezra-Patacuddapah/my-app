@@ -14,7 +14,7 @@ export default function LoginForm() {
         undefined,
     )
 
-    const inputStyles = "py-1 pl-2 border border-white rounded-md mb-1"
+    const inputStyles = "py-1 pl-2 border border-blue-300 rounded-md mb-1"
 
     return (
         <form 
