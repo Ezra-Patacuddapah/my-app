@@ -11,7 +11,7 @@ export function Create() {
         >
             <button
                 type='submit'
-                className='fixed bottom-4 right-4 md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
+                className='fixed bottom-4 right-4 cursor-pointer md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
             >
                 <PlusCircleIcon className={`w-8 h-8 md:w-12 md:h-12 ${className} animate-pulse`} />
                 <p className="hidden md:block md:text-xl md:ml-1">Create</p>
@@ -27,7 +27,7 @@ export function Update({ id }: { id: string }) {
         >
             <button 
                 type='submit'
-                className='md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
+                className='cursor-pointer md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
             >
                 <PencilSquareIcon className={`w-5 h-5 ${className}`} />
                 <p className="hidden md:block md:ml-1">Update</p>
@@ -42,7 +42,7 @@ export function Delete({ id }: { id: string }) {
         <form action={deleteTextWithId}>
             <button 
                 type='submit'
-                className='md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
+                className='cursor-pointer md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md'
             >
                 <TrashIcon className='w-5 h-5 text-red-400' />
                 <p className="hidden md:block md:ml-1">Delete</p>

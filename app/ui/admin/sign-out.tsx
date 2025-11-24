@@ -8,8 +8,9 @@ export default function SignOut() {
                 await signOut({ redirectTo: '/'})
             }}
             >
-                <button type="submit" className="text-yellow-400">
+                <button type="submit" className="text-yellow-400 cursor-pointer md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md">
                     <ArrowLeftStartOnRectangleIcon className="w-6 h-6" />
+                    <p className="hidden md:block md:text-xl md:ml-1">Sign Out</p>
                 </button>
             </form>
 

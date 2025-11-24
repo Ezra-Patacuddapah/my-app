@@ -50,8 +50,9 @@ export default function LoginForm() {
                 value={callbackUrl}
             />
             <div className="mt-1">
-                <button aria-disabled={isPending} type="submit" className="cursor-pointer">
+                <button aria-disabled={isPending} type="submit" className="cursor-pointer md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md">
                         <PaperAirplaneIcon className="w-7 h-7 animate-pulse text-blue-400" />
+                        <span className="hidden md:block md:text-xl ml-2">Send</span>
                 </button>
             </div>
             <div
