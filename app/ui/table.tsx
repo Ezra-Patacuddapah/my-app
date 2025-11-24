@@ -19,7 +19,7 @@ export default async function Table({
                         href={`/${text.id}/read`}
                     >
                         <div className="flex flex-col justify-center items-center border h-full mx-auto w-full max-w-sm border-gray-600 rounded-md p-6">
-                            <p className="md:text-2xl text-center">{text.text}</p>
+                            <p className="md:text-2xl text-center text-shadow-lg/100">{text.text}</p>
                         </div>
                     </Link>
                 </div>

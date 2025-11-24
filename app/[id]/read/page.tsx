@@ -17,7 +17,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
     }
     return (
         <main>
-            <div className='flex justify-center w-screen h-screen'>
+            <div className='flex justify-center w-screen h-screen text-shadow-lg/100'>
                 <ReadText text={text} />
             </div>
         </main>

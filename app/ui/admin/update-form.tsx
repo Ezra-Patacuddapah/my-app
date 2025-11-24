@@ -17,8 +17,9 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                 <input type="text" name="text" id="text" defaultValue={text.text} className='py-1 pl-2 mr-1 border border-blue-300 rounded-md' 
                     autoFocus placeholder='Update'
                 />
-                <button type="submit">
-                    <PaperAirplaneIcon className='w-6 h-6 text-blue-400 animate-pulse' />
+                <button type="submit" className="md:flex md:justify-center md:items-center md:bg-gray-700 md:px-2 md:py-1 md:rounded-md">
+                    <PaperAirplaneIcon className='w-6 h-6 text-blue-400 animate-pulse md:mr-1' />
+                    <p className="hidden md:block md:text-xl">Send</p>
                 </button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true' className='flex-inline'>

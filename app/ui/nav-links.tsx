@@ -7,10 +7,10 @@ import { HomeIcon, ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/soli
 
 const links = [
     {
-        name: <HomeIcon className="w-5 h-5" />, href: '/', id: 1,
+        name: <HomeIcon className="w-5 h-5 md:w-8 md:h-8" />, href: '/', id: 1,
     },
     {
-        name: <ArrowRightEndOnRectangleIcon className="w-7 h-7 fixed right-4 bottom-4 text-blue-400 animate-pulse" />, href: '/admin', id: 2,
+        name: <ArrowRightEndOnRectangleIcon className="w-7 h-7 fixed right-4 bottom-4 text-blue-400 animate-pulse md:w-10 md:h-10 md:mb-3" />, href: '/admin', id: 2,
     },
 ]
 
@@ -28,9 +28,9 @@ export default function NavLinks() {
                             >
                             <button 
                                 className={clsx(
-                                    'flex w-auto items-center justify-between hover:bg-sky-100 hover:text-blue-600 rounded-sm',
+                                    'flex w-auto items-center justify-between hover:bg-sky-100 hover:text-blue-600 rounded-sm md:rounded-md md:p-1 cursor-pointer',
                                     {
-                                        'bg-sky-100 text-blue-600': pathname === link.href,
+                                        'bg-sky-300 text-blue-800': pathname === link.href,
                                         'hidden': pathname !== '/',
                                     },
                                 )}
