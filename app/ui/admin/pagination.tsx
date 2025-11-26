@@ -106,8 +106,8 @@ function PaginationNav ({
         {
             'pointer-events-none invisible': isDisabled,
             'hover:bg-gray-900 hover: text-gray-800 md:pt-2 md:px-1 md:mb-1': !isDisabled,
-            'mr-2 md:mr-4': direction === 'left',
-            'ml-2 md:ml-4': direction === 'right',
+            'mr-2 md:mr-1': direction === 'left',
+            'ml-2 md:ml-1': direction === 'right',
         }
     )
 
