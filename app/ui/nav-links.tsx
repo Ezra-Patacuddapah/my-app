@@ -19,7 +19,7 @@ export default function NavLinks() {
 
     return (
         <>
-            <div className="flex justify-center items-center gap-1 fixed bottom-5 left-5 z-20">
+            <div className="flex justify-center items-center gap-1 fixed bottom-4 left-5 z-20">
                 {links.map(link => {
                     return (
                         <Link
