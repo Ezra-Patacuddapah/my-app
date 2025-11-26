@@ -79,7 +79,7 @@ function PaginationNumber({
             'rounded-r-md': position === 'last' || position === 'single',
             'z-10 bg-gray-900': isActive,
             'hover:bg-gray-800': !isActive && position !== 'middle',
-            'text-gray-300': position === 'middle',
+            'text-blue-400': position === 'middle',
         }
     )
 
