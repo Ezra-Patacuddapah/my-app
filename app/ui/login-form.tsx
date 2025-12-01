@@ -21,25 +21,27 @@ export default function LoginForm() {
             action={formAction}
             className="flex flex-col m-5 justify-center items-center"
         >
-            <label htmlFor="name" className="my-1">
+            <label htmlFor="name" className="my-1 flex">
                 <UserIcon className="w-5 h-5 text-gray-400" />
+                <span className="hidden md:block">Name</span>
             </label>
             <input 
                 type="text" 
                 id="name"
                 name="name"
-                placeholder="Enter Name"
+                placeholder="John Doe"
                 required
                 className={inputStyles}
             />
-            <label htmlFor="password" className="my-1">
-                <KeyIcon className="w-5 h-5 text-gray-400" />
+            <label htmlFor="password" className="my-1 flex">
+                <KeyIcon className="w-5 h-5 text-gray-400 md:mr-2" />
+                <span>Password</span>
             </label>
             <input 
                 type="password" 
                 id="password"
                 name="password"
-                placeholder="Enter Password"
+                placeholder="••••••"
                 required
                 minLength={6}
                 className={inputStyles}
