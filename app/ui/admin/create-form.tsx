@@ -30,10 +30,10 @@ export default function Form() {
                         <button
                             type="button"
                             onClick={handleClear}
-                            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-100 hover:text-gray-100 cursor-pointer"
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-100 hover:text-gray-100 cursor-pointer"
                             aria-label="Clear input"
                         >
-                            <XMarkIcon className="w-5 h-5" />
+                            <XMarkIcon className="w-5 h-5 bg-gray-800" />
                         </button>
                     )}
                 </div>

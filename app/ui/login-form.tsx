@@ -29,7 +29,7 @@ export default function LoginForm() {
                 type="text" 
                 id="name"
                 name="name"
-                placeholder="John Doe"
+                placeholder="Admin"
                 required
                 className={inputStyles}
             />
@@ -41,7 +41,7 @@ export default function LoginForm() {
                 type="password" 
                 id="password"
                 name="password"
-                placeholder="••••••"
+                placeholder="123456"
                 required
                 minLength={6}
                 className={inputStyles}
