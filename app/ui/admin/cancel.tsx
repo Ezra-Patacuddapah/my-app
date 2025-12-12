@@ -19,7 +19,7 @@ export function CancelAdmin() {
             href='/'
         >
             <button type="button">
-                    <XMarkIcon className='w-6 h-6 md:w-8 md:h-8 mt-2 mr-1 text-blue-400 fixed top-1 right-1 cursor-pointer md:border border-blue-400 rounded-full' />
+                    <XMarkIcon className='w-6 h-6 md:w-8 md:h-8 mt-2 mr-1 text-blue-400 fixed top-1 right-1 cursor-pointer md:bg-gray-700 rounded-full md:p-1' />
             </button>
         </Link>
     )
